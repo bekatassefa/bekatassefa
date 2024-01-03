@@ -1,45 +1,27 @@
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    overflow: hidden;
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    position: fixed;
+.image-container {
+    position: relative; /* Set to relative to allow absolute positioning within */
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Ensure the image doesn't overflow the container */
+}
+
+img {
     width: 100%;
-    z-index: 1000;
+    height: 100%;
+    object-fit: cover; /* Maintain the aspect ratio and cover the entire container */
 }
 
-nav {
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-section {
-    padding: 50px;
-}
-
-h1, h2 {
-    color: #333;
+#countdown {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    color: black;
 }
